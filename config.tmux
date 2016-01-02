@@ -115,6 +115,9 @@ main() {
 
     # enable mouse mode
     tmux set-option -g mode-mouse on
+    # enable mouse scrolling (TMUX 2.1)
+    # https://github.com/tmux/tmux/issues/145
+    tmux bind-key -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft='#{pane_in_mode}' 'send-keys -M' 'copy-mode -e'"
 
     # focus events enabled for terminals that support them
     tmux set-option -g focus-events on
