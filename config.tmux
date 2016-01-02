@@ -155,7 +155,7 @@ main() {
             tmux display-message "Sourced .tmux.conf!"'
     fi
 
-    # GENERAL CUSTOMIZATIONS (edvinasme)
+    # GENERAL CUSTOMIZATIONS
 
     # disable visual bell
     tmux set-option -g   bell-action any
@@ -163,7 +163,7 @@ main() {
     tmux set-option -g   visual-bell off
 
     # allow multiple commands under single prefix key within specified time (ms)
-    tmux set-option -g   repeat-time 500
+    tmux set-option -g   repeat-time 1000
 
     # DISPLAY CUSTOMIZATIONS (edvinasme)
     # start window numbers start from 1 instead of 0
