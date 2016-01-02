@@ -114,7 +114,7 @@ main() {
     tmux set-option buffer-limit 10
 
     # enable mouse mode
-    tmux set-window-option -g mode-mouse on
+    tmux set-option -g mode-mouse on
 
     # focus events enabled for terminals that support them
     tmux set-option -g focus-events on
