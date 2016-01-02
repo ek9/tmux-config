@@ -87,9 +87,6 @@ main() {
     # tmux messages are displayed for 4 seconds
     tmux set-option -g display-time 4000
 
-    # refresh 'status-left' and 'status-right' more often
-    tmux set-option -g status-interval 5
-
     # required (only) on OS X
     if is_osx && command_exists "reattach-to-user-namespace" && option_value_not_changed "default-command" ""; then
         tmux set-option -g default-command "reattach-to-user-namespace -l $SHELL"
@@ -182,21 +179,29 @@ main() {
     tmux set-option -g   set-titles on
     tmux set-option -g   set-titles-string ' #I-#W '
 
-     # statusbar customizations
-    tmux set-option -g   status-justify left
-    tmux set-option -g   status-left-length 15
-    tmux set-option -g   status-left ' #h |'
-    tmux set-option -g   status-right ' | %Y-%m-%d %H:%M #[default]'
-
     # Window options
     tmux set-window-option -g clock-mode-style 24
     tmux set-window-option -g monitor-activity on
     tmux set-window-option -g xterm-keys on
     tmux set-window-option -g automatic-rename on
 
+    ### Theme
+    ## Statusbar
+    # refresh 'status-left' and 'status-right' more often
+    tmux set-option -g status-interval 5
+
+     # statusbar customizations
+    tmux set-option -g   status-justify left
+    tmux set-option -g   status-left-length 100
+    tmux set-option -g   status-left '#[fg=green] #(whoami)@#h #[fg=yellow](#S) |'
+    tmux set-option -g   status-right '| #[fg=yellow] %Y-%m-%d %H:%M'
+
     # windows status format
     tmux set-window-option -g window-status-format ' #I-#W '
     tmux set-window-option -g window-status-current-format ' #I-#W '
 
+	set -g window-status-current-bg white
+	set -g window-status-current-fg black
+	set -g window-status-current-attr bold
 }
 main
