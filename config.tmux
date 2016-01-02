@@ -121,6 +121,10 @@ main() {
 	tmux bind-key -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
 	tmux bind-key -n WheelDownPane select-pane -t= \; send-keys -M
 
+    # make it scroll half page on wheelup/down
+    tmux bind-key -t vi-copy WheelUpPane halfpage-up
+    tmux bind-key -t vi-copy WheelDownPane halfpage-down
+
     # focus events enabled for terminals that support them
     tmux set-option -g focus-events on
 
