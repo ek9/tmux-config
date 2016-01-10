@@ -200,8 +200,15 @@ main() {
     tmux set-window-option -g window-status-format ' #I-#W '
     tmux set-window-option -g window-status-current-format ' #I-#W '
 
-	set -g window-status-current-bg white
-	set -g window-status-current-fg black
-	set -g window-status-current-attr bold
+	tmux set -g window-status-current-bg white
+	tmux set -g window-status-current-fg black
+	tmux set -g window-status-current-attr bold
+
+    # update environment
+    tmux set -g update-environment "DISPLAY SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTION WINDOWID XAUTHORITY BSPWM_SOCKET"
+
+    # disable tmux starting as login shell
+    # TODO tmux set -g default-command "${SHELL}"
+
 }
 main
