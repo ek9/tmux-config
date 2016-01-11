@@ -174,6 +174,7 @@ main() {
     # DISPLAY CUSTOMIZATIONS (edvinasme)
     # start window numbers start from 1 instead of 0
     tmux set-option -g   base-index 1
+    tmux set-option -g   pane-base-index 1
 
     # update titles
     tmux set-option -g   set-titles on
@@ -208,7 +209,7 @@ main() {
     tmux set -g update-environment "DISPLAY SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTION WINDOWID XAUTHORITY BSPWM_SOCKET"
 
     # disable tmux starting as login shell
-    # TODO tmux set -g default-command "${SHELL}"
+    tmux set -g default-command "${SHELL}"
 
 }
 main
