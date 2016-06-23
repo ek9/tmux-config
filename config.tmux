@@ -201,7 +201,7 @@ main() {
 	tmux set -g window-status-current-attr bold
 
     # update environment
-    tmux set -g update-environment "DISPLAY SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTION WINDOWID XAUTHORITY BSPWM_SOCKET"
+    tmux set -g update-environment "DISPLAY SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTION WINDOWID XAUTHORITY BSPWM_SOCKET PATH"
 
     # disable tmux starting as login shell
     tmux set -g default-command "${SHELL}"
