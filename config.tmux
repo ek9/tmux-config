@@ -173,7 +173,7 @@ main() {
 
     # update titles
     tmux set-option -g   set-titles on
-    tmux set-option -g   set-titles-string ' #I-#W '
+    tmux set-option -g   set-titles-string ' #I-#W #T'
 
     # Window options
     tmux set-window-option -g clock-mode-style 24
