@@ -25,11 +25,13 @@ Hit `prefix + I` to fetch the plugin and source it.
 ## Features
 
 - Enable UTF-8 support
+- Disabled tmux starting as a login shell
 - Address vim mode switching delay problems and workaround bug in OS X
 - Force use of correct `$TERM`
-- Increase scrollback buffer size
-- Increase `tmux` message display time and decrease status refresh times
+- Increase scrollback buffer size (50000 lines)
+- Increase `tmux` message display time (4s) and decrease status refresh times
 - Enable mouse focus events and mouse mode (on terminals that support them)
+- Enable tmux scrolling via mouse wheel up/down.
 - Enable vi key bindings in `tmux` command prompt and copy mode
 - `tmux` grouped session optimizations
 - Disable visual bell
@@ -43,7 +45,10 @@ Hit `prefix + I` to fetch the plugin and source it.
   - Start window numbering from 1 instead of 0
   - Enable updating of titles
   - Customize statusbar and windows display options
-- Other tweaks
+- Enable title updating + set default title string
+- Mac OS X + iTerm tweaks
+- Make sure specific environment variables are refreshed in new sessions/panes (`DISPLAY PATH SSH_AGENT_PID SSH_AUTH_SOCK` and some others)
+- Minor status bar customizations
 
 ## Authors
 
