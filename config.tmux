@@ -111,12 +111,11 @@ main() {
     tmux set-option buffer-limit 10
 
     # enable mouse mode
-    tmux set-option -g mode-mouse on
+    tmux set-option -g mouse on
 
     # make it scroll half page on wheelup/down
     tmux bind-key -t vi-copy WheelUpPane halfpage-up
     tmux bind-key -t vi-copy WheelDownPane halfpage-down
-
     # focus events enabled for terminals that support them
     tmux set-option -g focus-events on
 
@@ -189,22 +188,26 @@ main() {
      # statusbar customizations
     tmux set-option -g   status-justify left
     tmux set-option -g   status-left-length 100
-    tmux set-option -g   status-left '#[fg=green] #(whoami)@#h #[fg=yellow](#S) |'
-    tmux set-option -g   status-right '| #[fg=yellow] %Y-%m-%d %H:%M'
+    tmux set-option -g   status-left '#[fg=white,bold] #(whoami)@#h (#S) |'
+
+    # status right default
+    set -g status-right ' #[fg=white]%m/%d #[fg=white,bold]%H:%M '
 
     # windows status format
     tmux set-window-option -g window-status-format ' #I-#W '
     tmux set-window-option -g window-status-current-format ' #I-#W '
 
-	tmux set -g window-status-current-bg white
-	tmux set -g window-status-current-fg black
-	tmux set -g window-status-current-attr bold
+    # custom colors
+    #tmux set -g status-bg yellow
+    #tmux set -g statuf-fg blue
+    #tmux set -g window-status-current-bg white
+    #tmux set -g window-status-current-fg black
+    #tmux set -g window-status-current-attr bold
 
     # update environment
     tmux set -g update-environment "DISPLAY SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTION WINDOWID XAUTHORITY BSPWM_SOCKET PATH"
 
     # disable tmux starting as login shell
     tmux set -g default-command "${SHELL}"
-
 }
 main
