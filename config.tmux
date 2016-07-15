@@ -191,7 +191,7 @@ main() {
     tmux set-option -g   status-left '#[fg=white,bold] #(whoami)@#h (#S) |'
 
     # status right default
-    set -g status-right ' #[fg=white]%m/%d #[fg=white,bold]%H:%M '
+    set -g status-right '#[fg=white]| %m/%d #[fg=white,bold]%H:%M '
 
     # windows status format
     tmux set-window-option -g window-status-format ' #I-#W '
@@ -200,9 +200,8 @@ main() {
     # custom colors
     #tmux set -g status-bg yellow
     #tmux set -g statuf-fg blue
-    #tmux set -g window-status-current-bg white
-    #tmux set -g window-status-current-fg black
-    #tmux set -g window-status-current-attr bold
+    tmux set -g window-status-current-bg white
+    tmux set -g window-status-current-attr bold
 
     # update environment
     tmux set -g update-environment "DISPLAY SSH_ASKPASS SSH_AUTH_SOCK SSH_AGENT_PID SSH_CONNECTION WINDOWID XAUTHORITY BSPWM_SOCKET PATH"
