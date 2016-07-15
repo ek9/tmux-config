@@ -6,6 +6,8 @@ tmux-config
 [tmux-vim-bindings][2], [vim-tmux-focus-events][5], [tmux-colors-solarized][6]
 and other plugins.
 
+**Note!** For an example `tmux.conf` please check [tmux.conf in ek9/dotfiles][10].
+
 ## Requirements
 
 - [tmux][3]
@@ -69,3 +71,4 @@ Licensed under [MIT License](LICENSE).
 [4]: https://github.com/tmux-plugins/tpm
 [5]: https://github.com/tmux-plugins/vim-tmux-focus-events
 [6]: https://github.com/seebi/tmux-colors-solarized
+[10]: https://github.com/ek9/dotfiles/blob/master/.tmux.conf
