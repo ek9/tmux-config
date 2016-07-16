@@ -186,12 +186,13 @@ main() {
     tmux set-option -g status-interval 5
 
      # statusbar customizations
-    tmux set-option -g   status-justify left
-    tmux set-option -g   status-left-length 100
-    tmux set-option -g   status-left '#[fg=white,bold] #(whoami)@#h (#S) |'
+    tmux set-option -g status-justify left
+    tmux set-option -g status-left-length 96
+    tmux set-option -g status-right-length 64
+    tmux set-option -g status-left '#[fg=white,bold] #(whoami)@#h (#S) |'
 
     # status right default
-    set -g status-right '#[fg=white]| %m/%d #[fg=white,bold]%H:%M '
+    tmux set-option -g status-right '#[fg=white]| %m/%d #[fg=white,bold]%H:%M '
 
     # windows status format
     tmux set-window-option -g window-status-format ' #I-#W '
