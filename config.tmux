@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# based on https://github.com/tmux-plugins/tmux-sensible
+## ek9/tmux-config - https://github.com/ek9/tmux-config
+## tmux configuration - based on https://github.com/tmux-plugins/tmux-sensible
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
