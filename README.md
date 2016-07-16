@@ -4,7 +4,7 @@ tmux-config
 [tmux-config][0] is a tmux configuration as a TPM package. It is inspired by
 [tmux-sensible][1] with some things cleaned up. This plugin is compatible with
 [tmux-vim-bindings][2], [vim-tmux-focus-events][5], [tmux-colors-solarized][6]
-and other plugins.
+(**dark**).
 
 **Note!** For an example `tmux.conf` please check [tmux.conf in ek9/dotfiles][10].
 
