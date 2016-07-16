@@ -189,7 +189,7 @@ main() {
     tmux set-option -g status-justify left
     tmux set-option -g status-left-length 96
     tmux set-option -g status-right-length 64
-    tmux set-option -g status-left '#[fg=white,bold] #(whoami)@#h (#S) |'
+    tmux set-option -g status-left '#[fg=white] #(whoami)@#[fg=white,bold]# (#S) |'
 
     # status right default
     tmux set-option -g status-right '#[fg=white]| %m/%d #[fg=white,bold]%H:%M '
