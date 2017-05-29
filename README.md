@@ -55,7 +55,7 @@ Hit `prefix + I` to fetch the plugin and source it.
 
 ## Authors
 
-Copyright (c) 2015-2016 ek9 <dev@ek9.co> (https://ek9.co).
+Copyright (c) 2015-2017 ek9 <dev@ek9.co> (https://ek9.co).
 
 Copyright (c) 2014 Bruno Sutic and [various contributors](https://github.com/tmux-plugins/tmux-sensible/graphs/contributors)
 for portions of code from [tmux-sensible][1] project.
