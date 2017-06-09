@@ -6,7 +6,10 @@ tmux-config
 [tmux-vim-bindings][2], [vim-tmux-focus-events][5], [tmux-colors-solarized][6]
 (**dark**), [tmux-battery][7] and [tmux-cpu][8].
 
-**Note!** For an example `tmux.conf` please check [tmux.conf in ek9/dotfiles][10].
+**Note!** For an example `tmux.conf` please check [tmux.conf in
+ek9/shell-config][9].
+
+Part of [ek9/dotfiles][10] collection.
 
 ## Requirements
 
@@ -73,4 +76,5 @@ Licensed under [MIT License](LICENSE).
 [6]: https://github.com/seebi/tmux-colors-solarized
 [7]: https://github.com/tmux-plugins/tmux-battery
 [8]: https://github.com/tmux-plugins/tmux-cpu
-[10]: https://github.com/ek9/dotfiles/blob/master/.tmux.conf
+[9]: https://github.com/ek9/shell-config/blob/master/.tmux.conf
+[10]: https://github.com/ek9/dotfiles
