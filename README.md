@@ -6,8 +6,7 @@ tmux-config
 [tmux-vim-bindings][2], [vim-tmux-focus-events][5], [tmux-colors-solarized][6]
 (**dark**), [tmux-battery][7] and [tmux-cpu][8].
 
-**Note!** For an example `tmux.conf` please check [tmux.conf in
-ek9/shell-config][9].
+**Note!** For an example config please check [tmux.conf in ek9/shell-config][9].
 
 Part of [ek9/dotfiles][10] collection.
 
